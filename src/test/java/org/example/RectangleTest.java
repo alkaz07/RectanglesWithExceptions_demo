@@ -59,4 +59,11 @@ class RectangleTest {
 
     }
 
+    @Test
+    void testEqualsNo() throws Exception {
+        Rectangle r1 = new Rectangle(4, 3);
+        Rectangle r2 = new Rectangle(4, 4);
+        Assertions.assertFalse(r1.equals(r2));
+    }
+
 }
