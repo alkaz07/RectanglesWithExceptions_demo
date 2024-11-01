@@ -12,16 +12,16 @@ class RectangleTest {
     }
     @Test
     public void testConstructorBad1(){
-        Assertions.assertThrows(Exception.class, ()-> new Rectangle(-4,  3));
-        Assertions.assertThrows(Exception.class, ()-> new Rectangle(-4, -3));
-        Assertions.assertThrows(Exception.class, ()-> new Rectangle( 4, -3));
+        Assertions.assertThrows(NegativeLengthException.class, ()-> new Rectangle(-4,  3));
+        Assertions.assertThrows(NegativeLengthException.class, ()-> new Rectangle(-4, -3));
+        Assertions.assertThrows(NegativeLengthException.class, ()-> new Rectangle( 4, -3));
     }
 
     @Test
     public void testConstructorBad2(){
-        Assertions.assertThrows(Exception.class, ()-> new Rectangle( 0,  3));
-        Assertions.assertThrows(Exception.class, ()-> new Rectangle( 0,  0));
-        Assertions.assertThrows(Exception.class, ()-> new Rectangle( 4,  0));
+        Assertions.assertThrows(ZeroLengthException.class, ()-> new Rectangle( 0,  3));
+        Assertions.assertThrows(ZeroLengthException.class, ()-> new Rectangle( 0,  0));
+        Assertions.assertThrows(ZeroLengthException.class, ()-> new Rectangle( 4,  0));
     }
 
     @Test
