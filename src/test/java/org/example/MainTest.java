@@ -39,4 +39,30 @@ class MainTest {
 
         Assertions.assertEquals(7,Main.calcEqualRect(list));
     }
+
+    @Test
+    void testCountUnqueRectangles1() throws GeometryException {
+        ArrayList<Rectangle> arr = new ArrayList<>();
+        arr.add(new Rectangle(3, 4));
+        arr.add(new Rectangle(3, 4));
+        Assertions.assertEquals(1, Main.countUniqueRectangles(arr));
+    }
+
+    @Test
+    void testCountUnqueRectangles2() throws GeometryException {
+        ArrayList<Rectangle> arr = new ArrayList<>();
+        arr.add(new Rectangle(3, 4));
+        arr.add(new Rectangle(4, 4));
+        arr.add(new Rectangle(3, 4));
+        Assertions.assertEquals(2, Main.countUniqueRectangles(arr));
+    }
+
+    @Test
+    void testCountUnqueRectangles3() throws GeometryException {
+        ArrayList<Rectangle> arr = new ArrayList<>();
+        arr.add(new Rectangle(3, 4));
+        arr.add(new Rectangle(4, 4));
+        arr.add(new Rectangle(4, 3));
+        Assertions.assertEquals(2, Main.countUniqueRectangles(arr));
+    }
 }

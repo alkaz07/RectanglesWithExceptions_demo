@@ -63,4 +63,10 @@ public class Main {
         }
         return count;
     }
+
+    //Подсчет количества уникальных прямоугольнкиов в списке
+    public static int countUniqueRectangles(List<Rectangle> rectangleList){
+        Set<Rectangle> rectangleSet = new HashSet<>(rectangleList);
+        return rectangleSet.size();
+    }
 }
